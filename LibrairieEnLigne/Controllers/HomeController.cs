@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibrairieEnLigne.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,7 +11,10 @@ namespace LibrairieEnLigne.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            //Liste de tous les livres
+            DalLivre dalLivre = new DalLivre();
+            
+            return View(dalLivre.GetLivres());
         }
 
         public ActionResult About()
