@@ -10,6 +10,14 @@
         Elle simule un site de vente de livres en ligne.
     </p>
 </div>
+@using (Html.BeginForm("Recherche", "Home", FormMethod.Get, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="jumbotron">
+        @Html.Label("Recherche : ")
+        @Html.TextBox("recherche", string.Empty, new { placeholder = "Titre ou auteur recherché" })
+        <input type="submit" class="btn btn-default" value="Rechercher" />
+    </div>
+}
 
 <div class="row">
     @foreach (var livre in Model)

@@ -11,5 +11,10 @@ namespace LibrairieEnLigne.Models
         {
             return bdd.Livres.ToList();
         }
+
+        public List<Livre> GetLivres(string recherche)
+        {
+            return bdd.Livres.Where(l => l.Titre.Contains(recherche) || l.Auteur.Nom.Contains(recherche)).ToList();
+        }
     }
 }

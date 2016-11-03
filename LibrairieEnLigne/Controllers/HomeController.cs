@@ -17,6 +17,15 @@ namespace LibrairieEnLigne.Controllers
             return View(dalLivre.GetLivres());
         }
 
+        public ActionResult Recherche(string recherche)
+        {
+            //Liste des livres correspondant à la recherche
+            DalLivre dalLivre = new DalLivre();
+
+            //List<Livre> test = dalLivre.GetLivres(recherche);
+            return View("Index",dalLivre.GetLivres(recherche));
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
