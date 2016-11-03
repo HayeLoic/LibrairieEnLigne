@@ -165,8 +165,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Auteur.cs" />
     <Compile Include="Models\BddContext.cs" />
     <Compile Include="Models\Dal.cs" />
+    <Compile Include="Models\DalAuteur.cs" />
     <Compile Include="Models\DalLivre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\BddContextInit.cs" />

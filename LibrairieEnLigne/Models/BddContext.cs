@@ -9,5 +9,6 @@ namespace LibrairieEnLigne.Models
     public class BddContext : DbContext
     {
         public DbSet<Livre> Livres { get; set; }
+        public DbSet<Auteur> Auteurs { get; set; }
     }
 }
